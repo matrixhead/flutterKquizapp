@@ -45,14 +45,15 @@ class _QuizMasterState extends State<QuizMaster> {
   }
 
   void _nextquestion(int selected, BuildContext context) {
-    Qno++;
-    if ((Qno) < QAs.length) {
-      setState(() {
-        print(QAs[Qno].answers[selected].isTrue);
+    print(QAs[Qno].answers[selected].isTrue);
         if (QAs[Qno].answers[selected].isTrue == true) {
           points++;
           print(points);
         }
+    Qno++;
+    if ((Qno) < QAs.length) {
+      setState(() {
+        
       });
     } else {
       

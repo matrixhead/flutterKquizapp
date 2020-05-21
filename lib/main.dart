@@ -60,10 +60,8 @@ class homescreen extends StatefulWidget{
           future:fetch(),
           builder: (BuildContext context, AsyncSnapshot snapshot){
             switch (snapshot.connectionState){
-              case ConnectionState.none:return Text("press start");
               case ConnectionState.waiting:return Center(child:CircularProgressIndicator());
-              case ConnectionState.done:
-              return QuizMaster(QAs);
+              case ConnectionState.done:return QuizMaster(QAs);             
                           }
                         }              
                       ),
